@@ -14,6 +14,9 @@ class User
      */
     private static $db;
 
+    /**
+     * Свойства класса
+     */
     public $id;
     public $name;
     public $surname;
@@ -46,12 +49,12 @@ class User
 
         if(is_int($name)){
             $user = $this->selectUser($name);
-            $this->id=$user['id'];
-            $this->name=$user['name'];
-            $this->surname=$user['surname'];
-            $this->birthdate=$user['birthdate'];
-            $this->gender=$user['gender'];
-            $this->city=$user['city'];
+            $this->id = $user['id'];
+            $this->name = $user['name'];
+            $this->surname = $user['surname'];
+            $this->birthdate = $user['birthdate'];
+            $this->gender = $user['gender'];
+            $this->city = $user['city'];
         }
         if(!is_int($name) && !is_null($surname) && !is_null($birthdate) && !is_null($gender) && !is_null($city)){
             $this->validate($name, $surname, $birthdate, $gender, $city);
