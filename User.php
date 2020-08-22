@@ -89,7 +89,7 @@ class User
     public function isString(...$params)
     {
         foreach ($params as $param) {
-            if (!preg_match("/^[A-Za-z_-]*$/", $param)) {
+            if (!preg_match("/^[А-Яа-яA-Za-z_-]*$/", $param)) {
                 die("Имя, фамилия и город должны быть текстовыми данными.");
             }
         }
